@@ -1,0 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Main CSS */
+
+/* Custom Variable */
+
+:root {
+    --main-heading: 2.5rem;
+    --sub-heading: 2rem;
+    --paragraph: 1.25rem;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #181818;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-wrapper {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.info-card {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    /* background-color: red; */
+}
+
+.info-details {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.info-details > p {
+    opacity: 0.75;
+}
+
+.info-details > h1 {
+    font-size: var(--main-heading);
+}
+
+.info-details > p {
+    font-size: var(--paragraph);
+}
+
+.profile-pic {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 1;
+    height: 150px;
+}
+
+.profile-pic > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.main-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.about, .contact, .skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about > h1, .contact > h1, .skills > h1 {
+    font-size: var(--sub-heading);
+}
+
+.about > p, .contact > p, .skills > p {
+    margin-top: .5rem;
+    font-size: var(--paragraph);
+}
+
+/* .contact > h1 {
+    font-size: var(--sub-heading);
+} */
+
+/* .contact > p {
+    margin-top: 1rem;
+    font-size: var(--paragraph);
+} */
