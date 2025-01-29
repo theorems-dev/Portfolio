@@ -2,140 +2,246 @@
 v2.0 | 20110126
 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-    quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Main CSS */
 
 /* Custom Variable */
-
 :root {
-    --main-heading: 2.5rem;
-    --sub-heading: 2rem;
-    --paragraph: 1.25rem;
+  --main-heading: 2.5rem;
+  --sub-heading: 2rem;
+  --paragraph: 1.2rem;
 }
 
-
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    background: #181818;
-    color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #181818;
+  color: aliceblue;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Source Code Pro", serif;
 }
 
 .main-wrapper {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .info-card {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    /* background-color: red; */
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  /* background-color: red; */
+  background-color: rgba(39, 39, 39, 0.245);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
 }
 
 .info-details {
-    margin-top: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: .25rem;
+  /* margin-top: 1.25rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
 }
 
 .info-details > p {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 
 .info-details > h1 {
-    font-size: var(--main-heading);
+  font-size: var(--main-heading);
 }
 
 .info-details > p {
-    font-size: var(--paragraph);
+  font-size: var(--paragraph);
 }
 
 .profile-pic {
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    aspect-ratio: 1;
-    height: 150px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  aspect-ratio: 1;
+  height: 150px;
 }
 
 .profile-pic > img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .main-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.25rem;
 }
 
-.about, .contact, .skills {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.about,
+.contact,
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  background-color: rgba(39, 39, 39, 0.245);
+  border-radius: 1rem;
 }
 
-.about > h1, .contact > h1, .skills > h1 {
-    font-size: var(--sub-heading);
+.skills {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  background-color: rgba(39, 39, 39, 0.245);
+  border-radius: 1rem;
 }
 
-.about > p, .contact > p, .skills > p {
-    margin-top: .5rem;
-    font-size: var(--paragraph);
+.about > h1,
+.contact > h1,
+.skills > h1,
+.projects > h1 {
+  font-size: var(--sub-heading);
+}
+
+.about > p,
+.contact > p,
+.skills > p,
+.projects > p {
+  margin-top: 0.5rem;
+  font-size: var(--paragraph);
+  opacity: 0.85;
 }
 
 /* .contact > h1 {
@@ -146,3 +252,42 @@ body {
     margin-top: 1rem;
     font-size: var(--paragraph);
 } */
+
+/* .skill-btn {
+    cursor: pointer;
+    padding: .5rem 1.25rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border-radius: .25rem;
+    border: 1px solid aliceblue;
+    color: white;
+    transition: ease-in-out 80ms;
+} */
+
+.skill-list > ol > li > a {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  border: 1px solid snow;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: auto;
+  overflow: hidden;
+  color: white;
+  font-size: var(--paragraph);
+  opacity: 0.85;
+  transition: ease-out 40ms;
+}
+
+.skill-list > ol > li > a:hover {
+  opacity: 1;
+}
+
+.skill-list > ol {
+  display: flex;
+  gap: 0.75rem;
+}
