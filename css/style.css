@@ -142,15 +142,15 @@ body {
   justify-content: center;
   background: #181818;
   color: aliceblue;
-  /* font-family: "Courier New", Courier, monospace; */
-  font-family: "Source Code Pro", serif;
+  font-family: "Courier New", Courier, monospace;
+  /* font-family: "Source Code Pro", serif; */
 }
 
 .main-wrapper {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 1rem; */
   padding: 2rem 0;
 }
 
@@ -159,7 +159,7 @@ body {
   display: flex;
   gap: 1.5rem;
   /* background-color: red; */
-  background-color: rgba(39, 39, 39, 0.245);
+  /* background-color: rgba(39, 39, 39, 0.245); */
   border-radius: 1rem;
   padding: 1rem 1.25rem;
 }
@@ -204,29 +204,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  padding: 1rem 1.25rem;
+  gap: 1rem;
+  padding: 0 1.25rem;
 }
 
 .about,
 .contact,
-.projects {
+.projects,
+.skills {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem 1.25rem;
-  background-color: rgba(39, 39, 39, 0.245);
+  /* background-color: rgba(39, 39, 39, 0.245); */
   border-radius: 1rem;
+  gap: 0.5rem 0;
 }
 
-.skills {
+/* .skills {
   display: flex;
   width: 100%;
   flex-direction: column;
   padding: 1rem 1.25rem;
   background-color: rgba(39, 39, 39, 0.245);
   border-radius: 1rem;
-}
+} */
 
 .about > h1,
 .contact > h1,
@@ -239,7 +241,6 @@ body {
 .contact > p,
 .skills > p,
 .projects > p {
-  margin-top: 0.5rem;
   font-size: var(--paragraph);
   opacity: 0.85;
 }
@@ -290,4 +291,40 @@ body {
 .skill-list > ol {
   display: flex;
   gap: 0.75rem;
+}
+
+.links > ol {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.links > ol > li > a > img {
+  height: 2.25rem;
+}
+
+.social-link {
+  position: relative;
+  display: inline-block;
+}
+
+.social-link .tooltip {
+  visibility: hidden;
+  background-color: rgba(127, 127, 127, 0.5);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-link:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
