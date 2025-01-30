@@ -282,7 +282,7 @@ footer {
 }
 
 .skill-icons > li > a > img {
-  height: 1.75rem;
+  height: 1.5rem;
 }
 
 .skill-icons {
@@ -363,5 +363,9 @@ footer {
   }
   .info-details > h1 {
     font-size: 1.75rem;
+  }
+
+  .skill-icons > li > a {
+    padding: 0.5rem;
   }
 }
