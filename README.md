@@ -1,3 +1,3 @@
 # Portfolio
 
-## Making my Portfolio from scratch.
+- Used HTML CSS and JS
