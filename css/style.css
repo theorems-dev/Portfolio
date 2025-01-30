@@ -368,4 +368,8 @@ footer {
   .skill-icons > li > a {
     padding: 0.5rem;
   }
+
+  .info-card {
+    margin-top: 0;
+  }
 }
