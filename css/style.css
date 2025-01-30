@@ -334,10 +334,10 @@ footer {
   .main-wrapper {
     width: 480px;
   }
-  .about > p,
+  .info-details > p .about > p,
   .contact > p,
   .skills > p,
   .projects > p {
-    font-size: small;
+    font-size: medium;
   }
 }
