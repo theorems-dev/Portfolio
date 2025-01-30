@@ -153,12 +153,6 @@ body {
   padding: 2rem 0;
 }
 
-@media (max-width: 960px) {
-  .main-wrapper {
-    width: 480px;
-  }
-}
-
 .info-card {
   margin-top: 2rem;
   display: flex;
@@ -334,4 +328,16 @@ footer {
 .skill-icon:hover .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .main-wrapper {
+    width: 480px;
+  }
+  .about > p,
+  .contact > p,
+  .skills > p,
+  .projects > p {
+    font-size: small;
+  }
 }
