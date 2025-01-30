@@ -353,7 +353,6 @@ footer {
     font-size: 1rem;
   }
 
-  .info-details > h1,
   .contact > h1,
   .about > h1,
   .projects > h1 {
@@ -361,5 +360,8 @@ footer {
   }
   .profile-pic {
     height: 90px;
+  }
+  .info-details > h1 {
+    font-size: 1.75rem;
   }
 }
