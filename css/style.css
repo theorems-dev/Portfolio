@@ -341,3 +341,22 @@ footer {
     font-size: medium;
   }
 }
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .info-details > p,
+  .contact > p,
+  .about > p,
+  .projects > p {
+    font-size: 1rem;
+  }
+
+  .info-details > h1,
+  .contact > h1,
+  .about > h1,
+  .projects > h1 {
+    font-size: 1.5rem;
+  }
+}
