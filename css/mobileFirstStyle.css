@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Main CSS */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #181818;
+  color: aliceblue;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Source Code Pro", serif;
+  padding: 20px 20px;
+}
+
+.main-wrapper {
+  width: 100%;
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 1.25rem;
+  position: relative;
+}
+
+.info-card {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Profile Picture size */
+
+.profile-pic {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-pic > img {
+  width: 100%;
+}
+
+.main-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about,
+.contact,
+.skills,
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+/* Links size */
+
+.links > li > a {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links > li > a > img {
+  width: 100%;
+}
+
+.tooltip {
+  display: none;
+}
+
+/* Icons size */
+
+.skill-icons > li > a {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.skill-icons > li > a > img {
+  width: 100%;
+}
+
+/* Font Size */
+.info-details > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about > h1,
+.contact > h1,
+.skills > h1,
+.projects > h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.about > p,
+.contact > p,
+.skills > p,
+.projects > p {
+  font-size: 1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 40%;
+}
+
+.footer > hr {
+  width: 100%;
+}
+
+/* Background Blur */
+.profile-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* When Active */
+.profile-card.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Circular Profile View */
+.profile-view {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: purple;
+  border-radius: 50%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8); /* Start smaller */
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* When Active */
+.profile-card.active .profile-view {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Profile Image */
+.profile-view > img {
+  max-height: 150%;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .main-wrapper {
+    width: 80%;
+  }
+  .main-details {
+    gap: 2.25rem;
+  }
+  .profile-pic {
+    height: 8.5rem;
+  }
+  .tooltip {
+    display: block;
+  }
+  .social-link {
+    position: relative;
+    display: inline-block;
+  }
+  .social-link > .tooltip {
+    visibility: hidden;
+    background-color: rgba(127, 127, 127, 0.25);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .social-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .skill-icon {
+    position: relative;
+    display: inline-block;
+  }
+  .skill-icon > .tooltip {
+    visibility: hidden;
+    background-color: rgba(127, 127, 127, 0.25);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .skill-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .links > li > a {
+    height: 2.25rem;
+  }
+  .skill-icons > li > a {
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    height: 1.5rem;
+    transition: background 0.3s;
+  }
+
+  .skill-icons > li > a:hover {
+    background: white;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-wrapper {
+    width: 55%;
+  }
+  .profile-pic {
+    height: 10.5rem;
+  }
+
+  .info-details > p {
+    font-size: 1.5rem;
+  }
+
+  .about > h1,
+  .contact > h1,
+  .skills > h1,
+  .projects > h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .about > p,
+  .contact > p,
+  .skills > p,
+  .projects > p {
+    font-size: 1.2rem;
+  }
+  .profile-card.active {
+    display: none;
+  }
+}
