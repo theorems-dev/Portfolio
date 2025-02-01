@@ -128,162 +128,103 @@ table {
 }
 
 /* Main CSS */
-
-/* Custom Variable */
-:root {
-  --main-heading: 2.5rem;
-  --sub-heading: 2rem;
-  --paragraph: 1.2rem;
-}
-
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   background: #181818;
   color: aliceblue;
-  font-family: "Courier New", Courier, monospace;
-  /* font-family: "Source Code Pro", serif; */
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Source Code Pro", serif;
+  padding: 20px 20px;
 }
 
 .main-wrapper {
-  width: 800px;
+  width: 100%;
+  /* background: green; */
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  gap: 30px;
+  padding-top: 1.25rem;
+  position: relative;
 }
 
 .info-card {
-  margin-top: 2rem;
   display: flex;
-  gap: 1.5rem;
-  border-radius: 1rem;
-  padding: 1rem 1.25rem;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .info-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
-.info-details > p {
-  opacity: 0.75;
-}
-
-.info-details > h1 {
-  font-size: var(--main-heading);
-  font-weight: 700;
-}
-
-.info-details > p {
-  font-size: var(--paragraph);
-}
+/* Profile Picture size */
 
 .profile-pic {
-  border-radius: 100%;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 6.5rem;
   overflow: hidden;
-  aspect-ratio: 1;
-  height: 150px;
+  border-radius: 50%;
 }
 
 .profile-pic > img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
 }
 
 .main-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 1.25rem;
+  gap: 1.5rem;
 }
 
 .about,
 .contact,
-.projects,
-.skills {
-  width: 100%;
+.skills,
+.projects {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.25rem;
-  border-radius: 1rem;
-  gap: 0.5rem 0;
+  width: 100%;
+  gap: 0.75rem;
 }
 
-.about > h1,
-.contact > h1,
-.skills > h1,
-.projects > h1 {
-  font-size: var(--sub-heading);
-  font-weight: 600;
+/* Links size */
+
+.links > li > a {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
 }
 
-.about > p,
-.contact > p,
-.skills > p,
-.projects > p {
-  font-size: var(--paragraph);
-  opacity: 0.85;
-}
-
-.links > ol {
+.links {
   display: flex;
   gap: 1rem;
 }
 
-.links > ol > li > a > img {
-  height: 1.75rem;
-}
-
-.social-link {
-  position: relative;
-  display: inline-block;
-}
-
-.social-link .tooltip {
-  visibility: hidden;
-  background-color: rgba(127, 127, 127, 0.25);
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.social-link:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
-hr {
-  border-top: 1px solid #ccc;
-  opacity: 0.4;
+.links > li > a > img {
   width: 100%;
-  margin: 20px 0;
 }
 
-footer {
+.tooltip {
+  display: none;
+}
+
+/* Icons size */
+
+.skill-icons > li > a {
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
-  padding-bottom: 2.5rem;
-}
-
-.skill-icons > li > a > img {
-  height: 1.5rem;
+  height: 2rem;
 }
 
 .skill-icons {
@@ -291,86 +232,198 @@ footer {
   gap: 1rem;
 }
 
-.skill-icons > li > a {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid gray;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
-  aspect-ratio: 1;
-  transition: background-color 0.6s;
+.skill-icons > li > a > img {
+  width: 100%;
 }
 
-.skill-icons > li > a:hover {
-  background-color: rgba(255, 255, 255, 1);
+/* Font Size */
+.info-details > h1 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
-.skill-icon {
-  position: relative;
+.about > h1,
+.contact > h1,
+.skills > h1,
+.projects > h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.about > p,
+.contact > p,
+.skills > p,
+.projects > p {
+  font-size: 1rem;
 }
 
-.skill-icon .tooltip {
-  visibility: hidden;
-  background-color: rgba(127, 127, 127, 0.25);
-  color: white;
-  text-align: center;
-  padding: 5px;
-  border-radius: 5px;
+.footer {
   position: absolute;
-  top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.6s;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 40%;
 }
 
-.skill-icon:hover .tooltip {
+.footer > hr {
+  width: 100%;
+}
+
+/* Background Blur */
+.profile-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* When Active */
+.profile-card.active {
+  opacity: 1;
   visibility: visible;
+}
+
+/* Circular Profile View */
+.profile-view {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background-color: purple;
+  border-radius: 50%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8); /* Start smaller */
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* When Active */
+.profile-card.active .profile-view {
+  transform: scale(1);
   opacity: 1;
 }
 
-@media (max-width: 960px) {
+/* Profile Image */
+.profile-view > img {
+  max-height: 150%;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
   .main-wrapper {
-    width: 480px;
+    width: 80%;
   }
-  .info-details > p .about > p,
-  .contact > p,
-  .skills > p,
-  .projects > p {
-    font-size: medium;
+  .main-details {
+    gap: 2.25rem;
+  }
+  .profile-pic {
+    height: 8.5rem;
+  }
+  .tooltip {
+    display: block;
+  }
+  .social-link {
+    position: relative;
+    display: inline-block;
+  }
+  .social-link > .tooltip {
+    visibility: hidden;
+    background-color: rgba(127, 127, 127, 0.25);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .social-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .skill-icon {
+    position: relative;
+    display: inline-block;
+  }
+  .skill-icon > .tooltip {
+    visibility: hidden;
+    background-color: rgba(127, 127, 127, 0.25);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .skill-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  .links > li > a {
+    height: 2.25rem;
+  }
+  .skill-icons > li > a {
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    height: 1.5rem;
+    transition: background 0.3s;
+  }
+
+  .skill-icons > li > a:hover {
+    background: white;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 1024px) {
   .main-wrapper {
-    width: 100%;
-  }
-  .info-details > p,
-  .contact > p,
-  .about > p,
-  .projects > p {
-    font-size: 1rem;
-  }
-
-  .contact > h1,
-  .about > h1,
-  .projects > h1 {
-    font-size: 1.5rem;
+    width: 55%;
   }
   .profile-pic {
-    height: 90px;
-  }
-  .info-details > h1 {
-    font-size: 1.75rem;
+    height: 10.5rem;
   }
 
-  .skill-icons > li > a {
-    padding: 0.5rem;
+  .info-details > p {
+    font-size: 1.5rem;
   }
 
-  .info-card {
-    margin-top: 0;
+  .about > h1,
+  .contact > h1,
+  .skills > h1,
+  .projects > h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .about > p,
+  .contact > p,
+  .skills > p,
+  .projects > p {
+    font-size: 1.2rem;
+  }
+  .profile-card.active {
+    display: none;
   }
 }
