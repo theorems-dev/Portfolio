@@ -105,7 +105,7 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 2.5;
 }
 ol,
 ul {
@@ -135,7 +135,7 @@ body {
   background: #181818;
   color: aliceblue;
   /* font-family: "Courier New", Courier, monospace; */
-  font-family: "Source Code Pro", serif;
+  font-family: "Inter", serif;
   padding: 20px 20px;
 }
 
@@ -160,6 +160,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  line-height: 1;
 }
 
 /* Profile Picture size */
@@ -192,6 +193,7 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 0.75rem;
+  line-height: 1.4;
 }
 
 /* Links size */
@@ -285,7 +287,7 @@ body {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 100ms ease-in-out, visibility 100ms ease-in-out;
   z-index: 10;
 }
 
@@ -307,7 +309,7 @@ body {
   justify-content: center;
   transform: scale(0.8); /* Start smaller */
   opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
 }
 
 /* When Active */
@@ -400,7 +402,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .main-wrapper {
-    width: 55%;
+    width: 60%;
   }
   .profile-pic {
     height: 10.5rem;
@@ -421,7 +423,7 @@ body {
   .contact > p,
   .skills > p,
   .projects > p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   .profile-card.active {
     display: none;
